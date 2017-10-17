@@ -6,7 +6,8 @@ namespace CapgeminiTask
 {
     public class Worker
     {
-        Customer customer = new Customer();
+        //Customer customer = new Customer(string, string, int, string);
+        List<Customer> customer = new List<Customer>();
         //Menu
         public Worker()
         {
@@ -25,7 +26,7 @@ namespace CapgeminiTask
                 {
                     case 1:
                     {
-                        customer.AddCustomer();
+                        customer.Add(new Customer()) ;
                         Console.WriteLine(" Add menu works");
                     }
                         break;

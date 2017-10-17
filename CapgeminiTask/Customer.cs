@@ -4,26 +4,28 @@ using System.Text;
 
 namespace CapgeminiTask
 {
-    public struct Customer : ICustomer
+    public class Customer
     {
-        private string Name { get; set; }
-        private string Surname { get; set; }
-        private int TelephoneNumber { get; set; }
-        private string Address { get; set; }
+        //public string Name { get; set; }
+        //public string Surname { get; set; }
+        //public int TelephoneNumber { get; set; }
+        //public string Address { get; set; }
 
-        public void AddCustomer()
+        /*public Customer(string name, string surname, int telephoneNumber, string address)
         {
-            Console.WriteLine("Write the Name of customer: ");
+            Name = name;
+            Surname = surname;
+            TelephoneNumber = telephoneNumber;
+            Address = address;
+        }*/
+        public Customer (string Name, string Surname, int TelephoneNumber, string Address)
+        {
             Name = Console.ReadLine();
-            Console.WriteLine("Write the Surname of customer: ");
             Surname = Console.ReadLine();
-            Console.WriteLine("Write the Tel. number of customer: ");
             TelephoneNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Write the Address of customer: ");
             Address = Console.ReadLine();
+
         }
-
-
 
     }
 

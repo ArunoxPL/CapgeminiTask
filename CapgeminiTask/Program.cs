@@ -6,7 +6,8 @@ namespace CapgeminiTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Worker worker = new Worker();
+            worker.Menu();
         }
     }
 }

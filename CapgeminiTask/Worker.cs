@@ -6,6 +6,7 @@ namespace CapgeminiTask
 {
     public class Worker
     {
+        Customer customer = new Customer();
         //Menu
         public Worker()
         {
@@ -19,17 +20,20 @@ namespace CapgeminiTask
             try
             {
                 result = Convert.ToInt16(Console.ReadLine());
-
+               
                 switch (result)
                 {
                     case 1:
+                    {
+                        customer.AddCustomer();
                         Console.WriteLine(" Add menu works");
+                    }
                         break;
                     case 2:
-                        Console.WriteLine(" Update menu works");
+                        Console.WriteLine(" Delete menu works");
                         break;
                     case 3:
-                        Console.WriteLine(" Delete menu works");
+                        Console.WriteLine(" Update menu works");
                         break;
                     case 4:
                         Console.WriteLine(" Exit menu works");
@@ -42,12 +46,10 @@ namespace CapgeminiTask
             catch (FormatException fEx)
             {
                 Console.WriteLine(fEx.Message);
-                //throw;
             }
             catch (Exception Ex)
             {
                 Console.WriteLine("Something went wrong");
-                //throw;
             }
 
         }
